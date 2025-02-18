@@ -35,7 +35,7 @@
         ip: data.ip,
       };
 
-      return fetch("https://pixel-tracking-backend.onrender.com/api/track", {
+      return fetch("https://pixel-tracking-backend-dsv2.onrender.com/api/track", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(trackingData),
