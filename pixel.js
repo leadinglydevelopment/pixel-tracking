@@ -64,7 +64,7 @@
             };
 
             // Initial tracking call - creates or updates the session object
-            return fetch("https://pixel-tracking-backend-0o34.onrender.com/api/track", {
+            return fetch("https://pixeltracking.b2brocket.ai/api/track", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(trackingData)
@@ -89,7 +89,7 @@
                         timestamp: new Date().toISOString()
                     };
                     
-                    return fetch("https://pixel-tracking-backend-0o34.onrender.com/api/track/conversion", {
+                    return fetch("https://pixeltracking.b2brocket.ai/api/track/conversion", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(conversionData)
@@ -112,7 +112,7 @@
                 
                 // Use sendBeacon for more reliable data sending when page is unloading
                 navigator.sendBeacon(
-                    "https://pixel-tracking-backend-dsv2.onrender.com/api/track/update-session", 
+                    "https://pixeltracking.b2brocket.ai/api/track/update-session", 
                     JSON.stringify(sessionUpdateData)
                 );
             }
